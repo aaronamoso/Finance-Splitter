@@ -15,8 +15,8 @@ document.getElementById("mySubmit").onclick = function () {
     if (!isStringOnly.test(billName)) {
         totalPerPerson.append("Enter a bill name");
         return; // Stop execution if invalid
-    }
-
+    } 
+    
     // Validate totalBill and numOfPeople
     if (!numbersOnly.test(totalBill) || !numbersOnly.test(numOfPeople)) {
         totalPerPerson.append("Enter a valid number");
