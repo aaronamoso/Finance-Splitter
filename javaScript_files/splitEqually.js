@@ -6,24 +6,52 @@ document.getElementById("mySubmit").onclick = function () {
     let billName = document.getElementById("billName").value;
     let totalBill = document.getElementById("totalBill").value;
     let numOfPeople = document.getElementById("numOfPeople").value;
-    let totalPerPerson = document.getElementById("totalPerPerson");
+    let totalPerPerson = document.getElementById("totalPerPerson"); // This is the empty div
+    let displayElements = document.getElementById("displayElements");
+    let name = document.getElementById("fname").value;
 
     // Clear previous content to prevent duplicates
     totalPerPerson.innerHTML = "";
+    displayElements.innerHTML = "";
+
+    if (!isStringOnly.test(name)) {
+        totalPerPerson.append("Enter a valid name");
+        return; // Stop execution if invalid
+    }
 
     // Validate billName
     if (!isStringOnly.test(billName)) {
         totalPerPerson.append("Enter a bill name");
         return; // Stop execution if invalid
-    } 
-    
+    }
+
     // Validate totalBill and numOfPeople
     if (!numbersOnly.test(totalBill) || !numbersOnly.test(numOfPeople)) {
         totalPerPerson.append("Enter a valid number");
         return; // Stop execution if invalid
     }
+    displayElements.appendChild(document.createElement("br"));
+
+    displayElements.append(`Your Name: ${name}`);
+    displayElements.appendChild(document.createElement("br"));
+
+    displayElements.append(`Bill Name: ${billName}`);
+    displayElements.appendChild(document.createElement("br"));
+
+    displayElements.append(`Total Bill: ${totalBill}`);
+    displayElements.appendChild(document.createElement("br"));
+    
+    displayElements.append(`Number of People: ${numOfPeople}`);
+    displayElements.appendChild(document.createElement("br"));
+    displayElements.appendChild(document.createElement("br"));
 
     // Calculate and display result
     let result = (totalBill / numOfPeople).toFixed(2); // Allows only two decimals eg. 12.99
     totalPerPerson.append("Total per person: $" + result);
+
+    // Clear the input fields
+    document.getElementById("name").value = "";
+    document.getElementById("billName").value = "";
+    document.getElementById("totalBill").value = "";
+    document.getElementById("numOfPeople").value = "";
 };

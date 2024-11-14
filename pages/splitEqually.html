@@ -1,34 +1,38 @@
 <!-- This page splits the bill EQUALLY -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Split Equally</title>
- </head>
- <body>
-        <h2>Split Equally</h2>
-        <label for="billName">Bill Name:</label>
-        <input type="text" id="billName"placeholder="McDonald's" required>
-        <br>
+</head>
 
-        <label for="totalBill">Total Bill: $</label>
-        <input type="number" id="totalBill" placeholder="Ex: 12.34" required>
-        <br>
+<body>
+    <h2>Split Equally</h2>
+    <label for="billName">Bill Name:</label>
+    <input type="text" id="billName" placeholder="McDonald's" required>
+    <br>
 
-        <label for="numOfPeople">Number of People:</label>
-        <input type="number" id="numOfPeople" placeholder="Ex. 123" required>
-        <br>
+    <label for="totalBill">Total Bill: $</label>
+    <input type="number" id="totalBill" placeholder="Ex: 12.34" required>
+    <br>
 
-        <!-- This could be a div to insert the result Total Per Person: {result} -->
-        <div id="totalPerPerson"></div>
+    <label for="numOfPeople">Number of People:</label>
+    <input type="number" id="numOfPeople" placeholder="Ex. 123" required>
+  
+    <div id="displayElements"></div> <!-- // this will display the elements after everything is validated and submitted -->
 
-        <button type="submit" id="mySubmit">Submit</button>
+    <div id="totalPerPerson"></div> <!-- This could be a div to insert the result Total Per Person: {result} -->
+    <br>
+    
+    <button type="submit" id="mySubmit">Submit</button>
 
-        <p><em>Split Equally</em><br>Automatically calculates how much person owes 
-            (e.g., one individual pays for the entire group's restaurant bill).
-        </p>
+    <p><em>Split Equally</em><br>Automatically calculates how much person owes
+        (e.g., one individual pays for the entire group's restaurant bill).
+    </p>
 
     <script src="/javaScript_files/splitEqually.js"></script>
- </body>
- </html>
+</body>
+
+</html>

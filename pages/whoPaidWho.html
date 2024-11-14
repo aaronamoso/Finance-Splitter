@@ -11,7 +11,7 @@
     <h2>Custom Split (who paid who)</h2>
 
     <label for="fName">Your name:</label>
-    <input type="text" id="billName" placeholder="John Doe" required>
+    <input type="text" id="fname" placeholder="John" required>
     <br>
 
     <label for="billName">Bill Name:</label>
@@ -26,14 +26,16 @@
     <input type="number" id="numOfPeople" placeholder="Ex. 123" required>
     <br>
 
+    <div id="displayElements"></div> <!-- // this will display the elements after everything is validated and submitted -->
     <!-- This could be a div to insert the result Total Per Person: {result} -->
     <div id="totalPerPerson"></div>
+<br>
 
     <button type="submit" id="mySubmit">Submit</button>
     <p><em>Who Paid Who</em><br>Calculates the amount that individuals paid for specific categories of the bill (e.g.,
         Person A paid for Uber,
         Person B paid for food, Person C paid for drinks)</p>
 
-        <script src=""></script>
+        <script src="/javaScript_files/splitEqually.js"></script>
 </body>
 </html>
