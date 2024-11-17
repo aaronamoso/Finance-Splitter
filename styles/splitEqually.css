@@ -30,11 +30,3 @@ label {
     margin: 5%;
     padding: 5rem;
 }
-
-#displayDiv {
-    display: inline-block;
-    background-color: black;
-    text-align: center;
-    margin: 5%;
-    padding: 5rem;
-}
