@@ -8,10 +8,16 @@ document.getElementById("mySubmit").onclick = function () {
     let numOfPeople = document.getElementById("numOfPeople").value;
     let totalPerPerson = document.getElementById("totalPerPerson"); // This is the empty div
     let displayElements = document.getElementById("displayElements");
+    let name = document.getElementById("fname").value;
 
     // Clear previous content to prevent duplicates
     totalPerPerson.innerHTML = "";
     displayElements.innerHTML = "";
+
+    if (!isStringOnly.test(name)) {
+        totalPerPerson.append("Enter a valid name");
+        return; // Stop execution if invalid
+    }
 
     // Validate billName
     if (!isStringOnly.test(billName)) {
@@ -24,6 +30,9 @@ document.getElementById("mySubmit").onclick = function () {
         totalPerPerson.append("Enter a valid number");
         return; // Stop execution if invalid
     }
+    displayElements.appendChild(document.createElement("br"));
+
+    displayElements.append(`Your Name: ${name}`);
     displayElements.appendChild(document.createElement("br"));
 
     displayElements.append(`Bill Name: ${billName}`);
