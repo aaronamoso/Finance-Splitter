@@ -19,14 +19,22 @@ h2 {
 }
 
 label {
-    display: block;
-    text-align: left;
+    display: inline;
+    font-size: 1.5rem;
+}
+
+input {
+    font-size: 1.5rem;
 }
 
 #container {
-    display: inline-block;
+    display: block;
     background-color: black;
-    text-align: center;
     margin: 5%;
     padding: 5rem;
+}
+
+#totalPerPerson, #displayElements {
+    display: block;
+    background-color: rgb(49, 46, 46);;
 }
