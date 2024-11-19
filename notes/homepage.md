@@ -1,5 +1,0 @@
-Welcome to Personal Finance Splitter – your go-to app for effortlessly managing and splitting bills with friends, family, or roommates. Whether you’re dining out, sharing rent, or splitting any other shared expenses, this app makes it simple to calculate each person’s share, track who has paid, and keep everything organized.
-
-With a user-friendly interface and powerful backend features, Personal Finance Splitter takes the stress out of managing finances in group settings. Tailored for individuals and small groups, it helps avoid awkward conversations and ensures everyone pays their fair share.
-
-This project is designed not only to help you solve a common problem but also to showcase your frontend development skills, offering a practical and engaging way to demonstrate your technical expertise.
