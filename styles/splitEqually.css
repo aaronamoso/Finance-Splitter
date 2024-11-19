@@ -1,59 +1,178 @@
+/* General styles */
 body {
     margin: 0;
     background-color: rgb(28, 28, 30);
-    color: rgb(255, 255, 255);
-    font-family: "Nunito Sans", Verdana, Geneva, Tahoma, sans-serif;
-}
-
-h2,
-p,
-footer {
-    text-align: center;
-}
-
-h2 {
     color: white;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-    font-size: 2.1em;
-}
-
-
-#container {
-    display: inline-block;
-    background-color: black;
+    font-family: "Nunito Sans", Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    margin: 5%;
-    padding: 5rem;
+    padding: 0;
 }
 
+/* Header */
+h2 {
+    margin: 3rem 0;
+    font-size: 3rem;
+}
+
+/* Paragraphs */
+p {
+    color: rgb(204, 204, 204);
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 90%;
+    width: 500px; /* For larger screens */
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Main container */
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 3rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    max-width: 90%;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+/* Input field container */
 #inputFields {
-    display: inline-block; 
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(28, 28, 30);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
 }
 
+/* Form labels */
 label {
-    display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
+/* Input fields */
 input {
-    font-size: 2rem;
-    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(40, 40, 42);
+    color: white;
 }
 
+input::placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+/* Submit button */
 #mySubmit {
-    display: block; /* Makes the anchor a block-level element */
+    display: inline-block;
     background-color: rgb(0, 122, 255);
     color: white;
-    margin: 0 auto 3rem;    /* Centers horizontally and adds bottom margin */
-    border-radius: 1rem;   
-    padding: 0.5rem 1rem;      /* Padding inside the link */
-    text-decoration: none;  /* Removes underline */
-    width: max-content;     /* Keeps the width to fit the content */
-    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    width: fit-content;
+    align-self: center; /* Centers the button within the parent container  without creating a separate div*/
 }
 
+#mySubmit:hover {
+    background-color: rgb(0, 100, 210);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Display container */
 #displayDiv {
-    display: inline-block;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+    background-color: rgb(28, 28, 30);
+    border-radius: 2.5rem;
+    padding: 2rem;
+    max-width: 90%;
+    width: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Footer */
+footer {
+    margin: 4rem 0 2rem;
+    font-size: 1rem;
+    color: rgb(204, 204, 204);
+}
+
+/* Social icons */
+a i {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1rem;
+    transition: color 0.2s;
+}
+
+a i:hover {
+    color: #0077b5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+
+    #container {
+        padding: 2rem;
+        width: 100%;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    #mySubmit {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        margin-top: 1rem;
+    }
+
+    #displayDiv {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }

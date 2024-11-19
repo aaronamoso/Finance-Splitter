@@ -5,34 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who Owes Who</title>
+    <link rel="stylesheet" href="/styles/whoPaidwho.css">
+    <link rel="icon" href="/assets/images/logo_favicon.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fceeca1845.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <h2>Custom Split (who paid who)</h2>
 
-    <label for="fName">Your name:</label>
-    <input type="text" id="fname" placeholder="John" required>
-    <br>
+    <div id="container">
+        <div id="inputFields">
+            <label for="fName">Your name:</label>
+            <input type="text" id="fname" placeholder="John" required>
+            <br>
 
-    <label for="billName">Bill Name:</label>
-    <input type="text" id="billName" placeholder="McDonald's" required>
-    <br>
+            <label for="billName">Bill Name:</label>
+            <input type="text" id="billName" placeholder="McDonald's" required>
+            <br>
 
-    <label for="totalBill">Total Bill: $</label>
-    <input type="number" id="totalBill" placeholder="Ex: 12.34" required>
-    <br>
+            <label for="totalBill">Total Bill: $</label>
+            <input type="number" id="totalBill" placeholder="Ex: 12.34" required>
+            <br>
 
-    <label for="numOfPeople">Number of People:</label>
-    <input type="number" id="numOfPeople" placeholder="Ex. 123" required>
-    <br>
+            <label for="numOfPeople">Number of People:</label>
+            <input type="number" id="numOfPeople" placeholder="Ex. 123" required>
+            <br>
+            <button type="submit" id="mySubmit">Submit</button>
+        </div>
+        <div id="displayDiv">
+            <div id="displayElements"></div>
+            <!-- // this will display the elements after everything is validated and submitted -->
+            <!-- This could be a div to insert the result Total Per Person: {result} -->
+            <div id="totalPerPerson"></div>
+            <br>
+        </div>
+    </div>
 
-    <div id="displayElements"></div>
-    <!-- // this will display the elements after everything is validated and submitted -->
-    <!-- This could be a div to insert the result Total Per Person: {result} -->
-    <div id="totalPerPerson"></div>
-    <br>
-
-    <button type="submit" id="mySubmit">Submit</button>
     <p><em>Who Paid Who</em><br>Calculates the amount that individuals paid for specific categories of the bill (e.g.,
         Person A paid for Uber,
         Person B paid for food, Person C paid for drinks)</p>
@@ -59,7 +73,7 @@
         </p>
     </footer>
 
-    <script src="/javaScript_files/splitEqually.js"></script>
+    <script src="/javaScript_files/whoPaidWho.js"></script>
 </body>
 
 </html>

@@ -43,7 +43,6 @@ document.getElementById("mySubmit").onclick = function () {
     
     displayElements.append(`Number of People: ${numOfPeople}`);
     displayElements.appendChild(document.createElement("br"));
-    displayElements.appendChild(document.createElement("br"));
 
     // Calculate and display result
     let result = (totalBill / numOfPeople).toFixed(2); // Allows only two decimals eg. 12.99
