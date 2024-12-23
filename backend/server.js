@@ -6,6 +6,10 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const dotenv = require('dotenv')
 const app = express()
+// Next we import the Registration Model (Schema)
+const Registration = require('./models/Registration.js')
+
+
 
 // Middleware (Tools for Express)
 app.use(bodyParser.json()) // bodyParser allows the backend to read data sent from the frontend
@@ -17,11 +21,8 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to MongoDB'))  // Success message
     .catch((err) => console.error('Error connecting to MongoDB:', err));  // Error message
 
-// Next we import the Registration Model (Schema)
-const Registration = require('./models/Registration.js')
-
-// Route to handle form submissions (POST reques)
-
+    //  REGISTRATION AND LOGIN FORM ROUTE
+// Route to handle form submissions (POST reques) ///connected to html form action
 app.post('/register', async(req, res) => {
     const newRegistration = new Registration({
         name: req.body.name,
@@ -33,7 +34,8 @@ app.post('/register', async(req, res) => {
     await newRegistration.save();
 
     // Once that is saved, we will send the request to the frontend
-    res.json({message: 'Registration Successful!'})
+    // res.json({message: 'Registration Successful!'})
+    res.alert("Registration Successful!")
 });
 
 // Start the server

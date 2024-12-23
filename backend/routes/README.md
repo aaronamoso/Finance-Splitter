@@ -1,0 +1,1 @@
+This route handles different req, res for each feature. 

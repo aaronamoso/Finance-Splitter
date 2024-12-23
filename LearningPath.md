@@ -1,11 +1,22 @@
+CODING LOGS
+
 Hello! This is where I will document my progress for this project:
 
 Languages: HTML/CSS, JS
 Tools: Node.js, Express.js, MongoDB, Git, Miro
 
+Folder strucure: backend, frontend, . gitignore and a few notes
+
+How I am tackling this project?
+    1. Plan the design
+    2. Database - figure connecting: done!
+    3. Backend
+    4. Frontend
+    5. Add features one by one - doing front and back simultaneously
+
 I initially finished the frontend with user input validation but wanted to do more since I wanted to be able to use this app personally. A little background
 of how and why I am doing this project is because my friends and I have a hard time splitting expenses when we go on trips together. For instance, one pays for the 
-AirBnb, the other for food, and some for activities and many other things. I want to solve this problem of confusion and frustration and also I really think this project is scalable and can be used by many other people. There is so much features I wanted to create but for now, let's keep that as a secret! One step at a time.
+Airbnb, the other for food, and some for activities. I want to solve this problem of confusion and frustration and also I really think this project is scalable and can be used by many other people. There is so much features I wanted to create but for now, let's keep that as a secret! One step at a time.
 
 Progress:
 1. Finished the key component of the app with utilizing only JS, HTML, and CSS.
@@ -21,8 +32,25 @@ Progress:
             - Immediate Feedback - Required fields, correct email formats, password complexity indicators
             - Form Validation - Ensuring users enter the right type of data (numbers, emails, specific character limits)
             - Input Restrictions - Preventing invalid characters or out of range numbers directly in the input fields
-4. folder structure: Frontend > pages (html/css/js), 
+4. Dec. 22, I was able to connect the database. I can see form submissions on my mongoDB account which was fantastic! Since both folders are separated, backend and frontend, backend has the server, API, DB, Scheme.
+    What I learned: The form 'action' attribute is where data is being sent (where the server is expecting it). At locaholhost:3000/register, I am getting a json file; message: Registration successful. I still need to figure out how to just alert, refresh, and not show this JSON format--instead, direct user to their account...
 
-BackEnd/ > 
-    /models > Registration.js (schema json)
-    server.js
+5. I started looking into routing correctly and ensuring all the files are in the right folder. I did my research for the MVC pattern and it seems more organized than having a plain BE and FE folder. 
+    finance-splitter/
+│
+├── backend/
+│   ├── models/
+│   │   └── Registration.js
+│   │
+│   ├── routes/
+│   │   └── regAndLog.js   // New file for handling registration/login routes
+│   │
+│   ├── server.js    // Main entry point (minimal logic)
+│   └── .env         // MongoDB URI
+│
+└── frontend/        // Frontend (HTML, CSS, JS)
+    ├── views/
+    ├── controllers/
+    └── styles/
+
+6. 
