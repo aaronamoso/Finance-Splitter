@@ -4,7 +4,8 @@
   "description": "Splitting bills and expenses among friends, roommates, or colleagues is a common task, but often leads to confusion or arguments about how much each person owes, especially when one person paid for more than others (e.g., drinks vs. food at a restaurant). A **Personal Finance Splitter** app helps users easily calculate and track how much each person owes in different scenarios, whether the bill is split equally or unequally (e.g., different payment shares, adding or subtracting for specific items).",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",

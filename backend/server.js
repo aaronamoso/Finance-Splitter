@@ -4,30 +4,22 @@ const express = require('express') // this is like a phone. It lets the frontend
 const mongoose = require('mongoose') // this is the connection to the toy box for instance
 const bodyParser = require('body-parser')
 const cors = require('cors')
-
-
+const dotenv = require('dotenv')
 const app = express()
-
 
 // Middleware (Tools for Express)
 app.use(bodyParser.json()) // bodyParser allows the backend to read data sent from the frontend
 app.use(cors()) // lets the FE communicate w the BE, even when they are in different locations
 
-// Connecting to MongoDB
-
 // Connect to MongoDB (replace <password> and <dbname> with your details)
 require('dotenv').config();
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose.connect(process.env.MONGO_URI) 
+//     {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
     .then(() => console.log('Connected to MongoDB'))  // Success message
     .catch((err) => console.error('Error connecting to MongoDB:', err));  // Error message
-
-// mongoose.connect("mongodb://localhost:", {
-//     userNewUrlParser: true, // helps handle URLs properly
-//     useUnifiedTopology: true, // ensures stable connection to MongoDB
-// })
 
 // Next we import the Registration Model (Schema)
 const Registration = require('./models/Registration.js')
