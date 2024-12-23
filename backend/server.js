@@ -14,10 +14,6 @@ app.use(cors()) // lets the FE communicate w the BE, even when they are in diffe
 // Connect to MongoDB (replace <password> and <dbname> with your details)
 require('dotenv').config();
 mongoose.connect(process.env.MONGO_URI) 
-//     {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
     .then(() => console.log('Connected to MongoDB'))  // Success message
     .catch((err) => console.error('Error connecting to MongoDB:', err));  // Error message
 
