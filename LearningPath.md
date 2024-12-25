@@ -53,4 +53,4 @@ Progress:
     ├── controllers/
     └── styles/
 
-6. 
+6. Installing bcrypt to hash and store passwords. Dec. 23. This is important because it takes time to create password hashes therefore requires time to decrypt them, significantly slowing hackers to attempt the bcrypt hash
