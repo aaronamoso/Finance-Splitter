@@ -4,12 +4,15 @@ let lettersOnlyWithSpaces = /^[A-Za-z\s]+$/; // Ensures to only accept string
 // Handle submit validation
 document.getElementById("register").addEventListener("submit", async function (event) {
 
-    event.preventDefault(); // Prevent
+    event.preventDefault(); // Prevent the form from submission
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+    }
 
+  
     // sending POST req to the BE to register the user
     try {
         await fetch('http://localhost:3000/register', {
@@ -17,10 +20,16 @@ document.getElementById("register").addEventListener("submit", async function (e
             header: {
                 'Content-Type': 'application/json', // send data as JSON
             },
-            body: JSON.stringify({ name, email, password }), // Conver form data to JSON
+            body: JSON.stringify({ formData}), // Conver form data to JSON
         })
-        const result = await response.json();
-        alert(result.message);  // Show success or error message
+
+        const data = await response.json();
+                if (response.ok) {
+                    alert(data.message);
+                    window.location.href = '/login';  // Redirect to login page
+                } else {
+                    alert(data.message);
+                }
     } catch (error) {
         alert('Registration failed!');
         console.error('Error:', error);

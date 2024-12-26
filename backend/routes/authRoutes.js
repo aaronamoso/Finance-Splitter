@@ -1,33 +1,73 @@
 // Handles registration and login requests
-const express = require('express')
-const router = express.Router()
-const Registation = require('../models/Registration.js') // import the Registration model schema
-const bcrypt = require('bcrypt') // import bcrypt for password hashing
-const path = require('path') // import path to handle file paths
+const express = require('express');
+const router = express.Router();
+const Registration = require('../models/Registration.js');  // Import the Registration model (fixed typo)
+const bcrypt = require('bcrypt');  // Import bcrypt for password hashing
 
-//  REGISTRATION AND LOGIN FORM ROUTE
-// Route to handle form submissions (POST reques) ///connected to html form action
+// REGISTRATION ROUTE
+// Route to handle form submissions (POST request) connected to the HTML form action
 router.post('/register', async (req, res) => {
     try {
+        // Log the incoming request body (for debugging)
+        console.log(req.body);
+
+        // Validate required fields (name, email, password)
+        if (!req.body.name || !req.body.email || !req.body.password) {
+            return res.status(400).json({ message: 'All fields are required' });
+        }
+
+        // Hash the password before saving to the database
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+
+        // Create a new Registration instance
         const newRegistration = new Registration({
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password,
-        })
-        await newRegistration.save(); // Save the form data to MongoDB
+            password: hashedPassword, // Store the hashed password
+        });
 
-        // Once that is saved, we will send the request to the frontend
-        res.json({ message: 'Registration Successful!' });
+        // Save the registration data to MongoDB
+        await newRegistration.save();
+
+        // Respond with success message
+        res.status(201).json({ message: 'Registration Successful!' });
     } catch (error) {
-        res.status(500).json({ message: 'Error registering user', error });
+        // Log the error details for debugging
+        console.error('Error during registration:', error);
+
+        // Send error response
+        res.status(500).json({ message: 'Error registering user', error: error.message });
     }
 });
 
 // LOGIN ROUTE
+// Route to handle login requests (POST)
+router.post('/login', async (req, res) => {
+    try {
+        // Find user by email
+        const user = await Registration.findOne({ email: req.body.email });
 
+        // If user does not exist
+        if (!user) {
+            return res.status(400).json({ message: 'User not found' });
+        }
 
-router.post('/', async (req, res) => {
-    res.sendFile(path.join(__dirname, '/frontend/index.html'));
-})
+        // Compare provided password with hashed password in the database
+        const isMatch = await bcrypt.compare(req.body.password, user.password);
 
-module.exports = router; // export the router to be used in the server.js file  
+        if (isMatch) {
+            res.json({ message: 'Login Successful' });
+        } else {
+            res.status(400).json({ message: 'Invalid credentials' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Login error', error });
+    }
+});
+
+// Serve index.html as a fallback route
+// router.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../../frontend/index.html'));  // Serves homepage from frontend folder
+// });
+
+module.exports = router;  // Export the router to be used in server.js

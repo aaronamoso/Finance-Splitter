@@ -1,12 +1,24 @@
-// SCHEMA
-const mongoose = require('mongoose') // Import mongoose
+// SCHEMA (Defines the structure of data in MongoDB)
+const mongoose = require('mongoose');  // Import mongoose
 
-// defins the schema for the registration form
+// Define the schema for the registration form
 const registrationSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    password: String,
-})
+    name: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,  // Prevents duplicate email addresses
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+}, {
+    timestamps: true,  // Automatically adds createdAt and updatedAt fields
+});
 
-// Create and expor the model (Registration) -- so it can be used anywhere
-module.exports = mongoose.model('Registration', registrationSchema)
+// Create and export the model (Registration) -- so it can be used anywhere
+module.exports = mongoose.model('Registration', registrationSchema);
