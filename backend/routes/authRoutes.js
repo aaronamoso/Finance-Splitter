@@ -11,8 +11,6 @@ router.post('/register', async (req, res) => {
         // Log the incoming request body (for debugging)
         console.log(req.body);
 
-       
-
         // Hash the password before saving to the database
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
 
@@ -68,8 +66,8 @@ router.post('/login', async (req, res) => {
 });
 
 // Serve index.html as a fallback route
-// router.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../../frontend/index.html'));  // Serves homepage from frontend folder
-// });
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../frontend/index.html'));  // Serves homepage from frontend folder
+});
 
 module.exports = router;  // Export the router to be used in server.js
