@@ -1,6 +1,7 @@
 document.getElementById('loginForm').onsubmit = async function(e) {
     e.preventDefault();
 
+    // Gets the form data/value
     const formData = {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value

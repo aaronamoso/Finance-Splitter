@@ -11,10 +11,7 @@ router.post('/register', async (req, res) => {
         // Log the incoming request body (for debugging)
         console.log(req.body);
 
-        // Validate required fields (name, email, password)
-        if (!req.body.name || !req.body.email || !req.body.password) {
-            return res.status(400).json({ message: 'All fields are required' });
-        }
+       
 
         // Hash the password before saving to the database
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -25,6 +22,11 @@ router.post('/register', async (req, res) => {
             email: req.body.email,
             password: hashedPassword, // Store the hashed password
         });
+
+         // Validate required fields (name, email, password)
+        // if (!req.body.name || !req.body.email || !req.body.password) {
+        //     return res.status(400).json({ message: 'All fields are required' });
+        // }
 
         // Save the registration data to MongoDB
         await newRegistration.save();

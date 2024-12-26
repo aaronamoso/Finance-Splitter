@@ -10,7 +10,7 @@ Folder strucure: backend, frontend, . gitignore and a few notes
 How I am tackling this project?
     1. Plan the design
     2. Database - figure connecting: done!
-    3. Backend
+    3. Backend - mainly for js security, api
     4. Frontend
     5. Add features one by one - doing front and back simultaneously
 
@@ -54,3 +54,5 @@ Progress:
     └── styles/
 
 6. Installing bcrypt to hash and store passwords. Dec. 23. This is important because it takes time to create password hashes therefore requires time to decrypt them, significantly slowing hackers to attempt the bcrypt hash
+
+7. I am having trouble with the form submission. Once user is registered, my page just goes black. 
