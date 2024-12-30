@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+input, button {
+    border-radius: 1rem;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.forgotPass {
+    color: blue;
+    
+}
+
+#register {
+    background-color: blue;
+    color: white;
+}
+
+h1, h2 {
+    margin: 3rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+label, p {
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+input::placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+input {
+    border-style: solid;
+    color: white;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0%;
+    font-size: 0.9rem; 
+}

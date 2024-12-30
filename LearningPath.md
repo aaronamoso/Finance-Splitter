@@ -56,3 +56,8 @@ Progress:
 6. Installing bcrypt to hash and store passwords. Dec. 23. This is important because it takes time to create password hashes therefore requires time to decrypt them, significantly slowing hackers to attempt the bcrypt hash
 
 7. I am having trouble with the form submission. Once user is registered, my page just goes black. 
+
+8. December 29, started doing the CSS for login and registration form... I noticed that when using the media query you would only need to change the padding, margin, and font-size.
+
+
+

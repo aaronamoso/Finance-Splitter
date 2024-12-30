@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="/frontend/styles/registration.css">
 </head>
 
 <body>
@@ -26,8 +27,37 @@
         <button type="submit" id="register">Register</button>
     </form>
 
-    <p>Already have an account?</p>
+    <p class="forgotPass">Already have an account?</p>
     <button type="submit" onclick="">Login</button> 
+
+    <footer>
+        <!-- LinkedIn -->
+        <a
+          class="socials"
+          href="https://www.linkedin.com/in/aaron-amoso-002550231/"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+  
+        <!-- GitHub -->
+        <a class="socials" href="https://github.com/aaronamoso" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+  
+        <!-- Gmail -->
+        <a class="socials" href="mailto:amosoaaron@gmail.com" target="_blank">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+  
+        <p>
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Personal Finance Splitter. All rights reserved.
+        </p>
+      </footer>
 
     <script src="../javaScript_files/registration.js"></script>
 </body>
