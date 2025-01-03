@@ -40,7 +40,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
-// LOGIN ROUTE
+// LOGIN ROUTE 
 // Route to handle login requests (POST)
 router.post('/login', async (req, res) => {
     try {
