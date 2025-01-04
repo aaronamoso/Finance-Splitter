@@ -59,5 +59,7 @@ Progress:
 
 8. December 29, started doing the CSS for login and registration form... I noticed that when using the media query you would only need to change the padding, margin, and font-size.
 
+9. I finally got the registration and login to work. It is now showing data on MongoDB. Exciting stuff. Things I learned.
+    - ensure that the name attribute on html is present... in other words, the backend looks for these attributes. More like a bridge for the FE to BE.
 
 

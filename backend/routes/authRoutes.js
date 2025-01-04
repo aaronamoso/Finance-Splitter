@@ -9,7 +9,7 @@ const bcrypt = require('bcrypt');  // Import bcrypt for password hashing
 router.post('/register', async (req, res) => {
     try {
         // Log the incoming request body (for debugging)
-        console.log(req.body);
+        console.log('Password received:', req.body.password);
 
         // Hash the password before saving to the database
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -22,9 +22,9 @@ router.post('/register', async (req, res) => {
         });
 
          // Validate required fields (name, email, password)
-        // if (!req.body.name || !req.body.email || !req.body.password) {
-        //     return res.status(400).json({ message: 'All fields are required' });
-        // }
+        if (!req.body.name || !req.body.email || !req.body.password) {
+            return res.status(400).json({ message: 'All fields are required' });
+        }
 
         // Save the registration data to MongoDB
         await newRegistration.save();
