@@ -62,4 +62,5 @@ Progress:
 9. I finally got the registration and login to work. It is now showing data on MongoDB. Exciting stuff. Things I learned.
     - ensure that the name attribute on html is present... in other words, the backend looks for these attributes. More like a bridge for the FE to BE.
 
-
+10. January 4, currently doing wireframe for how API is being handled for private vs public or with or without an account. I learned that I can bridge using the public API to send over to my private. Think of it as adding items to cart. Using public API
+    for "products", (which this can be accessed without an account).
