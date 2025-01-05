@@ -64,3 +64,10 @@ Progress:
 
 10. January 4, currently doing wireframe for how API is being handled for private vs public or with or without an account. I learned that I can bridge using the public API to send over to my private. Think of it as adding items to cart. Using public API
     for "products", (which this can be accessed without an account).
+
+11. I think I will be focusing more on one feature is to split the bill and being able to save that to the database
+MODEL SCHEMA:
+Bill Name:
+Total Bill:
+Number of People: 
+Description:
