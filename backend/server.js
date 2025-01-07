@@ -18,6 +18,9 @@ app.use(express.urlencoded({ extended: true }));  // For form data
 // This serves files (like index.html) from the frontend folder
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend', 'index.html'));
+  });
 // ROUTES (Think of these as different tasks we handle)
 // Import the routes that handle form submissions and homepage requests
 const authRoutes = require('./routes/authRoutes');  // Handles registration and login
