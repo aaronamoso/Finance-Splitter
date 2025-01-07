@@ -3,12 +3,10 @@
       {
         "source": "/api/(.*)",
         "destination": "/backend/server.js"
-      }
-    ],
-    "routes": [
+      },
       {
-        "src": "/(.*)",
-        "dest": "/frontend/index.html"
+        "source": "/(.*)",
+        "destination": "/frontend/index.html"
       }
     ]
   }
