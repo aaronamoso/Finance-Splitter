@@ -71,3 +71,5 @@ Bill Name:
 Total Bill:
 Number of People: 
 Description:
+
+12. I am not encountering errors for routing since adding the Vercel json. I have noticed that the page itself was not workinng and have compromised the whole thing. Will look into it.
