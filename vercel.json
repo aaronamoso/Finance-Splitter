@@ -5,6 +5,10 @@
         "destination": "/backend/server.js"
       },
       {
+        "source": "/(.*).(css|js|png|jpg|jpeg|gif|svg)",
+        "destination": "/frontend/$1.$2"
+      },
+      {
         "source": "/(.*)",
         "destination": "/frontend/index.html"
       }
