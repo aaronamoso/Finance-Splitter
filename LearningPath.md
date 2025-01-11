@@ -77,3 +77,7 @@ Description:
 13. Will hide the buttons and create a new branch just in case.
 
 14. January 9, I had to comment out the button section on the index.html because this is a new feature -- will then create a branch.
+
+15. The href on the index.html was incorrect therefore everytime the buttons were clicked, it directed users to the raw and not styled index css/homepage.
+
+16. Will continue on creating the wireframe since registration is done. Will clean up the overall UX for the mobile version.
