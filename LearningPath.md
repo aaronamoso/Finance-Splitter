@@ -81,3 +81,5 @@ Description:
 15. The href on the index.html was incorrect therefore everytime the buttons were clicked, it directed users to the raw and not styled index css/homepage.
 
 16. Will continue on creating the wireframe since registration is done. Will clean up the overall UX for the mobile version.
+
+17. New plan: I will change the whole layout to be more readable and eye catching. For portofolio sake and since I applied to many jobs.
