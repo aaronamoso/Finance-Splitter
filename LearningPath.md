@@ -84,4 +84,4 @@ Description:
 
 17. New plan: I will change the whole layout to be more readable and eye catching. For portofolio sake and since I applied to many jobs.
 
-18. January 12. Currently figuring out the custome logic for the backend.
+18. January 12. Currently figuring out the custome logic for the backend. 
