@@ -6,7 +6,7 @@ document.getElementById('loginForm').onsubmit = async function(e) {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value
     };
-
+ 
     try {
         const response = await fetch('/api/login', {
             method: 'POST',
