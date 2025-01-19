@@ -71,9 +71,9 @@ Bill Name:
 Total Bill:
 Number of People: 
 Description:
-
+ 
 12. I am not encountering errors for routing since adding the Vercel json. I have noticed that the page itself was not workinng and have compromised the whole thing. Will look into it.
-
+ 
 13. Will hide the buttons and create a new branch just in case.
 
 14. January 9, I had to comment out the button section on the index.html because this is a new feature -- will then create a branch.
