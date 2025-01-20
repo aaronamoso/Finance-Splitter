@@ -18,7 +18,7 @@ const registrationSchema = new mongoose.Schema({
     },
 }, {
     timestamps: true,  // Automatically adds createdAt and updatedAt fields
-});
+}); 
 
 // Create and export the model (Registration) -- so it can be used anywhere
 module.exports = mongoose.model('Registration', registrationSchema);
