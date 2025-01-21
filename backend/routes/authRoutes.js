@@ -70,4 +70,6 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../../frontend/index.html'));  // Serves homepage from frontend folder
 });
 
+// Once logged in, it needs to direct to the user dashboard
+
 module.exports = router;  // Export the router to be used in server.js
