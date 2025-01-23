@@ -86,3 +86,4 @@ Description:
 
 18. January 12. Currently figuring out the custom logic for the backend. 
 
+19. Registration complete, api to dashboard now
