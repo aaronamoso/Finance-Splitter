@@ -72,4 +72,4 @@ router.get('/', (req, res) => {
 
 // Once logged in, it needs to direct to the user dashboard
 
-module.exports = router;  // Export the router to be used in server.js
+module.exports = router;  // Export the router to be used in server.js 
