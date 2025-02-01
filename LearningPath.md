@@ -87,3 +87,9 @@ Description:
 18. January 12. Currently figuring out the custom logic for the backend. 
 
 19. Registration complete, api to dashboard now
+
+20. Creating User Dashboard where it shows Welcome message, recent bills, and outstanding balance, CTA buttons on the bottom
+
+21. Decided to use React for the frontend instead that way pages are dynamic and easier to create and reuse.
+
+22. 
