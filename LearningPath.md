@@ -94,3 +94,4 @@ Description:
 
 22. Feb 12. Logic for custom split I think would be much more ideal to usr either a checkbox or adding name for each person instead of people adding friends
 
+23. Feb 13. Continuing with the project feature itself.
