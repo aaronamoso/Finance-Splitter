@@ -13,3 +13,24 @@
 // SCHEMA
 const mongoose = require("mongoose");
 
+// Defining Schema for the custom split form
+const customSplitSchema = new mongoose.Schema({
+    billName: {
+        type: String,
+        required: true,
+    },
+    totalBill: {
+        type: Number,
+        required: true,
+    },
+    numOfPeople: {
+        type: Number,
+        required: true,
+    }, 
+    settleDebts: {
+        type: Boolean,
+        required: true,
+    }
+})
+
+module.exports = mongoose.model("CustomSplit", customSplitSchema);
