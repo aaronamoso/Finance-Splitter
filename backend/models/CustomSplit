@@ -9,3 +9,6 @@
 //  (this can be done as either checking/ticking boxes or filling out name), settle debts,
 // view history.
 // How many user input or 
+
+// SCHEMA
+const mongoose = require("mongoose");
