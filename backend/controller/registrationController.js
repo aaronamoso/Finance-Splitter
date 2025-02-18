@@ -1,6 +1,5 @@
-// This is where the business logic is for registration/registering users
-
-const Registration = require('../models/Registration.js');  
+// registrationController.js
+const Registration = require('../models/RegistrationModel.js');  
 const bcrypt = require('bcrypt');  
 
 // Handles user registration
