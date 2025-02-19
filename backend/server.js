@@ -19,18 +19,21 @@ dotenv.config();  // Load environment variables from .env file
 app.use(express.json());  // Lets the server understand JSON data
 app.use(express.urlencoded({ extended: true }));  // Lets the server understand form data
 
-// Serve static files (Frontend)
-app.use(express.static(path.join(__dirname, '../frontend')));  // Shows the frontend files
+// Serve static files (REACT Frontend)
+app.use(express.static(path.join(__dirname, '../frontend/react-frontend/build')));  // Shows the frontend files
 
 // Catch-all route to serve index.html
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/index.html'));  // Always show the frontend page
+    res.sendFile(path.resolve(__dirname, '../frontend/react-frontend/build', 'index.html'));  // Always show the frontend page
   });
   
 // Routes
 app.use('/', pageRoutes);  // Serve registration and login pages
 app.use('/', homepageRoutes);  // Show the homepage
 app.use('/auth', authRoutes);  // Handle registration and login requests
+
+// Routes for React frontend
+
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)  // Connect to the database

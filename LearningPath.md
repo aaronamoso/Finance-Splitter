@@ -95,3 +95,8 @@ Description:
 22. Feb 12. Logic for custom split I think would be much more ideal to usr either a checkbox or adding name for each person instead of people adding friends
 
 23. Feb 13. Continuing with the project feature itself.
+
+24. Feb 18. Finished the backend logic, moving onto the frontend using REACT. Things to create respectively:
+    1. Introduction (This is where user has no account)
+    2. Registration / Login page
+    3. User Dashboard page
