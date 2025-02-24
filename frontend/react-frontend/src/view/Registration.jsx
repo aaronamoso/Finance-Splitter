@@ -1,9 +1,11 @@
-import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import '../styles/registration.css';
 
 const Registration = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
+  const [showNotification, setShowNotification] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -18,7 +20,11 @@ const Registration = () => {
     })
       .then((response) => {
         if (response.ok) {
-          navigate('/UserDashboard'); // Redirect on success
+          setShowNotification(true); // Show success notification
+          setTimeout(() => {
+            setShowNotification(false);
+            navigate('/UserDashboard'); // Navigate after a short delay
+          }, 2000); // Adjust the delay as needed
         } else {
           alert('Registration failed');
         }
@@ -49,6 +55,15 @@ const Registration = () => {
       <p className="forgotPass">Already have an account?</p>
       <button type="button" onClick={() => navigate('/login')}>Login</button>
 
+      {showNotification && (
+        <div className="notification-container">
+          <div className="notification">
+            <p>Registration successful! Welcome aboard.</p>
+            <button onClick={() => setShowNotification(false)}>Close</button>
+          </div>
+        </div>
+      )}
+
       <footer>
         <a className="socials" href="https://www.linkedin.com/in/aaron-amoso-002550231/" target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-linkedin"></i>
@@ -62,13 +77,10 @@ const Registration = () => {
           <i className="fa-regular fa-envelope"></i>
         </a>
 
-        <p>
-          &copy; {new Date().getFullYear()} Personal Finance Splitter. All rights reserved.
-        </p>
+        <p>&copy; {new Date().getFullYear()} Personal Finance Splitter. All rights reserved.</p>
       </footer>
     </div>
   );
 };
 
 export default Registration;
- 

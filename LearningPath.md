@@ -100,3 +100,20 @@ Description:
     1. Introduction (This is where user has no account)
     2. Registration / Login page
     3. User Dashboard page
+
+25. Homepage -> Registration/Login -> 
+    UserDashboard -> 
++------------------------------------+
+| Welcome back, [Username]!          |
+|                                    |
+| Recent Bills:                      |
+| - Dinner at Joe's  $120  Pending   |
+| - Weekend Trip     $300  Settled   |
+| - Movie Night      $60   Pending   |
+|                                    |
+| Outstanding Balances:              |
+| - You owe Bob: $15                 |
+| - Alice owes you: $20              |
+|                                    |
+| [Create New Bill] [View All Bills] |
++------------------------------------+
