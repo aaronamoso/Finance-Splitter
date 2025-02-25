@@ -7,7 +7,7 @@ function UserDashboard() {
             <h1>Welcome, (add name) </h1>
 
             <h2>Recent Bills:</h2>
-            
+
         </div>
       
     </div>
@@ -15,3 +15,4 @@ function UserDashboard() {
 }
 
 export default UserDashboard
+ 
