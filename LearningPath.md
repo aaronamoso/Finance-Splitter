@@ -117,3 +117,5 @@ Description:
 |                                    |
 | [Create New Bill] [View All Bills] |
 +------------------------------------+
+
+Pending, Settled can be a dropdown option for now
