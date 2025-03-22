@@ -28,7 +28,7 @@ const Registration = () => {
         } else {
           alert('Registration failed');
         } 
-      })
+      }) 
       .catch((error) => console.error('Error:', error));
   };
 
