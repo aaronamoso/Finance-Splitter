@@ -27,7 +27,7 @@ const Registration = () => {
           }, 2000); // Adjust the delay as needed
         } else {
           alert('Registration failed');
-        } 
+        }  
       }) 
       .catch((error) => console.error('Error:', error));
   };
