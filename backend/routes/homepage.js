@@ -5,7 +5,7 @@ const router = express.Router();  // Creates a router object
 
 // Route to serve the homepage (index.html)
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/index.html'));
+    res.sendFile(path.join(__dirname, '../../frontend/index.html')); // main index or homepage
 });
 
 module.exports = router;  // Export the router to be used in server.js
