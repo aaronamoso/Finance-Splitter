@@ -19,12 +19,10 @@ dotenv.config();  // Load environment variables from .env file
 app.use(express.json());  // Lets the server understand JSON data
 app.use(express.urlencoded({ extended: true }));  // Lets the server understand form data
 
-// Serve static files (REACT Frontend)
-app.use(express.static(path.join(__dirname, '../frontend/react-frontend/build')));  // Shows the frontend files
 
 // Catch-all route to serve index.html
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/react-frontend/build', 'index.html'));  // Always show the frontend page
+    res.sendFile(path.resolve(__dirname, '../frontend/index.html'));  // Always show the frontend page
   });
   
 // Routes

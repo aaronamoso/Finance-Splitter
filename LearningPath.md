@@ -119,3 +119,6 @@ Description:
 +------------------------------------+
 
 Pending, Settled can be a dropdown option for now
+
+April 1: Decided to delete the react frontend app. will focus more on the backend model
+
