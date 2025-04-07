@@ -89,3 +89,5 @@ Description:
 19. Registration complete, api to dashboard now
 
 20. Creating User Dashboard where it shows Welcome message, recent bills, and outstanding balance, CTA buttons on the bottom
+
+21. FE and BE Logic: 
