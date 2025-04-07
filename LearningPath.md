@@ -91,3 +91,14 @@ Description:
 20. Creating User Dashboard where it shows Welcome message, recent bills, and outstanding balance, CTA buttons on the bottom
 
 21. FE and BE Logic: 
+💡 Quick Cheat Sheet:
+Task	Frontend or Backend?
+Showing a list of bills	- Frontend
+Calculating how to split a bill - Backend (main logic)
+Toggling dark mode	- Frontend
+Logging in a user	- Backend
+Storing user info	- Backend (DB)
+Showing error messages	- Frontend
+Verifying if user is logged in	- Backend
+Sending bill data to API	- Frontend
+Returning bill summary data	- Backend
