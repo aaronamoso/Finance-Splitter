@@ -27,4 +27,4 @@ document.getElementById('loginForm').onsubmit = async function(e) {
         console.error('Error:', error);
         alert('Login failed.');
     }
-};
+}; 

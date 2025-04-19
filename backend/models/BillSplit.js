@@ -28,22 +28,3 @@ const billSplitSchema = new mongoose.Schema({
     },
 });
 module.exports = mongoose.model('billSplit', billSplitSchema);
-
-const CustomBillSplit = new mongoose.Schema({
-    billName: {
-        type: String,
-        required: true,
-    },
-    totalAmount: {
-        type: Number,
-        required: true,
-    },
-    numberOfPeople: {
-        type: Number,
-        required: true,
-    },
-    splitAmount: {
-        type: Number,
-        required: true,
-    },
-});
