@@ -90,6 +90,20 @@ Description:
 
 20. Creating User Dashboard where it shows Welcome message, recent bills, and outstanding balance, CTA buttons on the bottom
 
+<<<<<<< HEAD
+21. FE and BE Logic: 
+💡 Quick Cheat Sheet:
+Task	Frontend or Backend?
+Showing a list of bills	- Frontend
+Calculating how to split a bill - Backend (main logic)
+Toggling dark mode	- Frontend
+Logging in a user	- Backend
+Storing user info	- Backend (DB)
+Showing error messages	- Frontend
+Verifying if user is logged in	- Backend
+Sending bill data to API	- Frontend
+Returning bill summary data	- Backend
+=======
 21. Decided to use React for the frontend instead that way pages are dynamic and easier to create and reuse.
 
 22. Feb 12. Logic for custom split I think would be much more ideal to usr either a checkbox or adding name for each person instead of people adding friends
@@ -122,3 +136,4 @@ Pending, Settled can be a dropdown option for now
 
 April 1: Decided to delete the react frontend app. will focus more on the backend model
 
+>>>>>>> main
