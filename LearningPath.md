@@ -137,3 +137,15 @@ Pending, Settled can be a dropdown option for now
 April 1: Decided to delete the react frontend app. will focus more on the backend model
 
 >>>>>>> main
+
+
+🛠️ How to actually move your stuff:
+
+Do this	Because
+Move your logos/images to /public/images/ --------- Next.js will serve them from /images/logo.png
+
+Move small UI pieces (like a card, form, navbar) into /components/Name/Name.jsx	------------ Easier to find and reuse later
+
+In pages/, make a dashboard/ folder and organize dashboard-related screens inside ------------- Clearer routing and scaling later
+
+Make a services/ folder --------------- To keep API functions clean, like signupUser, createBill, etc
