@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGO_URI)  // Connect to the database
     .catch((err) => console.error('Error connecting to MongoDB:', err));  // Error message
 
 // Start the server and listen on port 3000
-app.listen(5000, () => {
-    console.log(`Server running on http://localhost:5000`);  // Server confirmation message
+app.listen(5001, () => {
+    console.log(`Server running on http://localhost:5001`);  // Server confirmation message
 });
 
