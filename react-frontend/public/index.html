@@ -1,43 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance/Bill Splitter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/assets/images/logo_favicon.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fceeca1845.js" crossorigin="anonymous"></script>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+    <header></header>
+    <div id="root"> </div>
+    <div id="about">
+        <h1>Personal Finance Splitter</h1>
+        <p>Welcome to <b style="color: white;">Personal Finance Splitter</b> – your go-to app for effortlessly managing
+            and splitting bills
+            with
+            friends,
+            family, or roommates. Whether you’re dining out, sharing rent, or splitting any other shared expenses, this
+            app
+            makes it simple to calculate each person’s share, track who has paid, and keep everything organized.</p>
+        <br><br>
+        <p>With a user-friendly interface and powerful backend features, Personal Finance Splitter takes the stress out
+            of
+            managing finances in group settings. Tailored for individuals and small groups, it <b
+                style="color: white;">helps avoid awkward
+                conversations and ensures everyone pays their fair share.</b></p>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <h3 style="text-align: center; font-weight: bold; margin-bottom: 2rem;">Try now!</h3>
+        <div id="btnContainer">
+            <!-- when they click this button, it directs them to react registration form -->
+            <!-- <a id="tryBtn" href="/registration">Sign Up</a> -->
+             <a id="tryBtn" href="/signup">Sign Up</a>
+             <br>
+            <a id="tryBtn" href="pages/splitEqually.html">Split Equally</a>
+            <h5 style="display: inline; margin: 0 1rem; font-size: 1.5rem;"> / </h5>
+            <a id="tryBtn" href="pages/whoPaidWho.html">Custom Split</a>
+            
+        </div>
+    </div>
+    <!-- BUTTON SECTION -->
+    <!-- <section>
+        <button formaction="./pages/logIn.html"><a href="./pages/logIn.html">Login</a></button>
+        <button formaction="./pages/registration.html"><a href="./pages/registration.html">Sign Up</a></button>
+    </section> -->
+
+    <h2>Features...</h2>
+
+    <div id=" features">
+                <ol>
+                    <li>Users can input the total amount and the number of people splitting the bill.</li>
+                    <li>Ability to account for different payment shares (e.g., one person paid for the drinks, another
+                        paid for
+                        food).</li>
+                    <li>Real-time updates to the amount each person owes.</li>
+                    <li>Option to add recurring expenses (like rent) with split options (equal or custom).</li>
+                </ol>
+                <!-- Call to action -->
+        </div>
+
+        <footer>
+            <!-- LinkedIn -->
+            <a class="socials" href="https://www.linkedin.com/in/aaronamoso/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <!-- GitHub -->
+            <a class="socials" href="https://github.com/aaronamoso" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <!-- Gmail -->
+            <a class="socials" href="mailto:amosoaaron@gmail.com" target="_blank">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+
+            <p>&copy;
+                <script>document.write(new Date().getFullYear());</script> Personal Finance Splitter. All rights
+                reserved.
+            </p>
+        </footer>
+</body>
+
 </html>
