@@ -149,3 +149,22 @@ Move small UI pieces (like a card, form, navbar) into /components/Name/Name.jsx	
 In pages/, make a dashboard/ folder and organize dashboard-related screens inside ------------- Clearer routing and scaling later
 
 Make a services/ folder --------------- To keep API functions clean, like signupUser, createBill, etc
+
+Starting over with the frontend portion: We will stick with react.jsx! 
+
+FOLLOW AGILE METHODOLOGY
+
+Conventional React Folder naming: 
+| Purpose             | Folder Name   | Example                  |
+| ------------------- | ------------- | ------------------------ |
+| Route screens       | `/pages`      | `/pages/Login/Login.jsx` |
+| Reusable components | `/components` | `Navbar`, `FormInput`    |
+| Form screens        | `/pages/Auth` | Group `Login` + `Signup` |
+| API calls           | `/services`   | `authService.js`         |
+| Custom hooks        | `/hooks`      | `useAuth.js`             |
+| Shared styles       | `/styles`     | `form.module.css`        |
+
+
+Frontend → Route → Controller → Model → Database
+You POST to the route (e.g., /auth/register)
+The route calls the controller, which uses the model.
