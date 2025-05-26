@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './Signup.css'; // adjust the path if needed
+import './Register.css'; // adjust the path if needed
 import { useNavigate } from 'react-router-dom';
 
-const Signup = () => {
+const Register = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,7 +23,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:3000/routes/registrationRoutes', {
+      const res = await fetch('http://localhost:5001/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', //
@@ -46,7 +46,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup-container">
+    <div className="register-container">
       <h1>Bill Splitter</h1>
       <h2>Create your account</h2>
 
@@ -126,4 +126,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Register;

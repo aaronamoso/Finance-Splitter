@@ -163,3 +163,8 @@ Conventional React Folder naming:
 | API calls           | `/services`   | `authService.js`         |
 | Custom hooks        | `/hooks`      | `useAuth.js`             |
 | Shared styles       | `/styles`     | `form.module.css`        |
+
+
+Frontend → Route → Controller → Model → Database
+You POST to the route (e.g., /auth/register)
+The route calls the controller, which uses the model.

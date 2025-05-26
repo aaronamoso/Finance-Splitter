@@ -1,4 +1,3 @@
-// registrationController.js
 const Registration = require('../models/RegistrationModel.js');  
 const bcrypt = require('bcrypt');  
 
