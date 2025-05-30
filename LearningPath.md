@@ -168,3 +168,7 @@ Conventional React Folder naming:
 Frontend → Route → Controller → Model → Database
 You POST to the route (e.g., /auth/register)
 The route calls the controller, which uses the model.
+
+May 26. Finished transition plain html and js to React.js. DB is doing goode and users can now register and login
+
+TASK: build up the dashboard UI.
