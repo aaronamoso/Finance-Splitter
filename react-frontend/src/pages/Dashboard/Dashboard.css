@@ -1,0 +1,35 @@
+section {
+    background-color: rgb(244, 210, 210);
+    width: 50%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 2.5rem;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    background-color: white;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+}
+
+/* MEDIA QUERIES */

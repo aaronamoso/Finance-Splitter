@@ -35,7 +35,7 @@ const Register = () => {
 
       if (res.ok) {
         alert(data.message || 'Registration successful!');
-        navigate('/login'); // redirect to login page
+        navigate('/dashboard'); // redirect to dashboard
       } else {
         alert(data.message || 'Registration failed!');
       }
