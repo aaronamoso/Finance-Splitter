@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Register.css'; // adjust the path if needed
+import './Register.module.css'; // adjust the path if needed
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
@@ -91,37 +91,6 @@ const Register = () => {
 
       <p className="forgotPass">Already have an account?</p>
       <button onClick={() => navigate('/login')}>Login</button>
-
-      <footer>
-        <a
-          className="socials"
-          href="https://www.linkedin.com/in/aaron-amoso-002550231/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a
-          className="socials"
-          href="https://github.com/aaronamoso"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa-brands fa-github"></i>
-        </a>
-
-        <a
-          className="socials"
-          href="mailto:amosoaaron@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa-regular fa-envelope"></i>
-        </a>
-
-        <p>&copy; {new Date().getFullYear()} Personal Finance Splitter. All rights reserved.</p>
-      </footer>
     </div>
   );
 };

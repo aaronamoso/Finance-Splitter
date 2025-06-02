@@ -1,0 +1,163 @@
+/* /* General Styles */
+body {
+    margin: 0;
+    background-color: rgb(28, 28, 30);
+    color: white;
+    font-family: "Nunito Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, p, footer {
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    margin: 3rem 0;
+    font-size: 3rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Form Styles */
+form {
+    background-color: rgb(28, 28, 30);
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    max-width: 90%;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    text-align: left;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background-color: rgb(40, 40, 42);
+    color: white;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+/* Button */
+button {
+    display: inline-block;
+    background-color: rgb(0, 122, 255);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    width: fit-content;
+    align-self: center;
+    margin: 1rem auto;
+}
+
+button:hover {
+    background-color: rgb(0, 100, 210);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Forgot Password Text */
+.forgotPass {
+    color: rgb(204, 204, 204);
+    font-size: 1rem;
+    margin: 2rem 0;
+}
+
+/* Footer Styles */
+footer {
+    margin: 4rem 0 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: rgb(204, 204, 204);
+}
+
+/* Social Icons */
+a i {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1rem;
+    transition: color 0.2s;
+}
+
+a i:hover {
+    color: #0077b5;
+}
+
+.socials {
+    display: inline;
+}
+
+.fa-brands, .fa-regular {
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    h1 {
+        margin: 1.5rem 0;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        margin: 2%;
+        padding: 2rem;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+
+    input {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .forgotPass, p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css'; // Adjust the path if needed
+import './Login.module.css'; // Adjust the path if needed
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -72,7 +72,7 @@ const Login = () => {
         />
         <br />
 
-        <label>
+        {/* <label>
           <input
             type="checkbox"
             name="rememberMe"
@@ -80,11 +80,11 @@ const Login = () => {
             onChange={handleChange}
           />{' '}
           Remember me?
-        </label>
+        </label> */}
 
-        <p>
+        {/* <p>
           <a href="">Forgot Password?</a>
-        </p>
+        </p> */}
 
         <button type="submit">Login</button>
       </form>
