@@ -1,5 +1,6 @@
 import React from 'react'
 import './Dashboard.module.css'
+import AddExpenseForm from './components/AddExpenseForm'
 
 const Dashboard = () => {
   return (
@@ -19,6 +20,8 @@ const Dashboard = () => {
                 </ul>
                </nav>
                <div className="content">
+                    
+
 
                 </div>
             </section>
