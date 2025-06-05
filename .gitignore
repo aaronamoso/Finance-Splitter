@@ -3,3 +3,5 @@ notes
 .env
 frontend
 backend
+*.md
+.md

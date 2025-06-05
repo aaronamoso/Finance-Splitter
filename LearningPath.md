@@ -172,3 +172,11 @@ The route calls the controller, which uses the model.
 May 26. Finished transition plain html and js to React.js. DB is doing goode and users can now register and login
 
 TASK: build up the dashboard UI.
+
+June 1-2: Cleaned up everything and now everything is working as it should--DB is connected once again, able to move plain html/css and jsx into react components.
+- THINGS I LEARNED WHEN REFACTORING THE FRONTEND:
+1. file.module.css - this ensures you are only touching the file you are currently working on (the only scope is the component you are working on)--i found that the hard way when one component--even though they are not being called or imported--create changes onto other files. This happens because global CSS--like index.css--is imported into the index.html through the root component (App.js) -- further impacting the whole app.
+
+CSS.modules.css scopes only locally so styles are untouched.
+
+2. Utilize Google inspection. This is how I found out which files are being rendered and changed. 
